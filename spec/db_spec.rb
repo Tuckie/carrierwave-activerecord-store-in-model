@@ -22,7 +22,7 @@ ActiveRecord::Migration.create_table :apartments do |t|
 end
 
 class ApartmentUploader < CarrierWave::Uploader::Base
-  storage :db
+  storage :active_record_store_in_model
 end
 
 class Apartment < ActiveRecord::Base
@@ -36,7 +36,7 @@ class Apartment < ActiveRecord::Base
     # and then copy our file attributes into the yet unsaved record. After that, it's saved... 
     super
     store_picture!
-    %w(identifier original_filename content_type size data). each do |attr|
+    %w(identifier original_filename content_type size data).each do |attr|
       self[attr] = self.picture.file.file[attr]
     end
   end

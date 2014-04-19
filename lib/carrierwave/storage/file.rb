@@ -1,6 +1,6 @@
 module CarrierWave
   module Storage
-    module DB 
+    module ActiveRecordStoreInModel 
       class File
         def self.create!(new_file, identifier, store_dir)
           attributes = { :identifier        => identifier,

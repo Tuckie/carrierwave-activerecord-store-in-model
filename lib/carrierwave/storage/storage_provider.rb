@@ -1,6 +1,6 @@
 module CarrierWave
   module Storage
-    module DB 
+    module ActiveRecordStoreInModel 
 
       class StorageProvider
 

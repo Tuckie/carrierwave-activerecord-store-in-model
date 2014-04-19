@@ -6,7 +6,7 @@ require 'rspec'
 require 'carrierwave/orm/activerecord'
 require 'colored'
 require 'factory_girl_rails'
-require_relative '../lib/db' #FIXME need to fix this
+
 include ActionDispatch::TestProcess
 FactoryGirl.define do
   factory :apartment do

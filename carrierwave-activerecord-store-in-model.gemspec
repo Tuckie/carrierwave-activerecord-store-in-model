@@ -1,44 +1,25 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path('../lib', __FILE__)
 
-require 'carrierwave-db/storage/version'
+require 'carrierwave/storage/version'
 
 Gem::Specification.new do |gem|
-  gem.name        = "carrierwave-db"
-  gem.version     = CarrierwaveDB::VERSION
-  gem.authors     = ["Royendgel Silberie "]
-  gem.email       = ["royendgel@gmail.com"]
-  gem.homepage    = "https://github.com/royendgel/carrierwave-db"
-  gem.summary     = %q{Upload to database (blob)}
-  gem.description = %q{Upload your files directly in databse}
-  #  gem.required_ruby_version = ">= 1.9.0"
+  gem.name        = "carrierwave-activerecord-store-in-model"
+  gem.version     = CarrierWave::ActiveRecordStoreInModel::VERSION
+  gem.authors     = ["Ace Suares,", "Royendgel Silberie"]
+  gem.email       = ["ace@suaregem.com", "royendgel@gmail.com"]
+  gem.homepage    = "https://github.com/acesuares/carrierwave-activerecord-store-in-model"
+  gem.summary     = %q{Store file data in the database using ActiveRecord.}
+  gem.description = %q{Store file data in the database using ActiveRecord, but not in a seperate table, but in the model itself, instead.}
   gem.require_paths = ['lib']
+  gem.licenses    = ["MIT"]
 
+  gem.rubyforge_project = "carrierwave-activerecord-store-in-model"
 
-files_to_include = %w{
-    LICENSE
-    README.md
+  gem.files         = `git ls-files`.split("\n")
+  gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
+  #gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
 
-    Rakefile
-
-    carrierwave-db.gemspec
-
-    lib/db.rb
-    lib/carrierwave-db/storage/active_record_file.rb
-    lib/carrierwave-db/storage/file.rb
-    lib/carrierwave-db/storage/storage_provider.rb
-    lib/carrierwave-db/storage/version.rb
-
-    spec/spec_helper.rb
-    spec/lib/carrierwave-db/storage/file_spec.rb
-    spec/lib/carrierwave-db/storage/storage_provider_spec.rb
-    spec/lib/carrierwave-db/carrierwave-activerecord_spec.rb
-  }
-
-  gem.files         = files_to_include
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
-
-  # # CarrierWave has broken in 0.x releases.
   gem.add_runtime_dependency 'carrierwave', '~> 0.8.0'
 
   # ActiveRecord 3.3 is unlikely, but prevent it just in case.

@@ -1,6 +1,6 @@
 module CarrierWave
   module Storage
-    module DB
+    module ActiveRecordStoreInModel
       class ActiveRecordFile < ::ActiveRecord::Base
 
         alias_method    :delete, :destroy
