@@ -1,0 +1,4 @@
+.ruby-version
+spec/public/uploads
+db/*db
+.project
