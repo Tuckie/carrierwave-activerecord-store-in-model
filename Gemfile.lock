@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    carrierwave-activerecord-store-in-model (0.8.0)
+    carrierwave-activerecord-store-in-model (0.10.0)
       activerecord (~> 3.2.0)
       carrierwave
 
