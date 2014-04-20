@@ -2,4 +2,5 @@
 spec/public/uploads
 db/*db
 .project
+Gemfile.lock
 pkg
