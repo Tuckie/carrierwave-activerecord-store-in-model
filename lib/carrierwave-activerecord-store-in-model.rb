@@ -1,14 +1,15 @@
+
 require 'active_record'
 require 'carrierwave'
 
 module CarrierWave
 
   module Storage
-    module ActiveRecordStoreInModel
-      autoload :VERSION,          'carrierwave/storage/version'
-      autoload :StorageProvider,  'carrierwave/storage/storage_provider'
-      autoload :File,             'carrierwave/storage/file'
-      autoload :ActiveRecordFile, 'carrierwave/storage/active_record_file'
+    module ActiverecordStoreInModel
+      autoload :VERSION,          'carrierwave-activerecord-store-in-model/storage/version'
+      autoload :StorageProvider,  'carrierwave-activerecord-store-in-model/storage/storage_provider'
+      autoload :File,             'carrierwave-activerecord-store-in-model/storage/file'
+      autoload :ActiveRecordFile, 'carrierwave-activerecord-store-in-model/storage/active_record_file'
     end
   end
 
@@ -16,7 +17,7 @@ module CarrierWave
     class Base
 
       configure do |config|
-        config.storage_engines[:active_record_store_in_model] = 'CarrierWave::Storage::ActiveRecordStoreInModel::StorageProvider'
+        config.storage_engines[:activerecord_store_in_model] = 'CarrierWave::Storage::ActiverecordStoreInModel::StorageProvider'
       end
 
     end # Base

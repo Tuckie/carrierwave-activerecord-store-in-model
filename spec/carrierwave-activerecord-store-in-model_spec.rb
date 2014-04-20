@@ -1,3 +1,4 @@
+require 'carrierwave-activerecord-store-in-model'
 require 'spec_helper'
 
 ActiveRecord::Base.establish_connection(
@@ -22,7 +23,7 @@ ActiveRecord::Migration.create_table :apartments do |t|
 end
 
 class ApartmentUploader < CarrierWave::Uploader::Base
-  storage :active_record_store_in_model
+  storage :activerecord_store_in_model
 end
 
 class Apartment < ActiveRecord::Base
