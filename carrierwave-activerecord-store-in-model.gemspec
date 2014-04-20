@@ -20,7 +20,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   
-  gem.add_runtime_dependency 'carrierwave', '~> 0.8.0'
+  gem.add_runtime_dependency 'carrierwave'
 
   # ActiveRecord 3.3 is unlikely, but prevent it just in case.
   gem.add_runtime_dependency 'activerecord', '~> 3.2.0'

@@ -2,3 +2,4 @@
 spec/public/uploads
 db/*db
 .project
+pkg
